@@ -7,9 +7,11 @@ var data = require('./data.json')
  */
 var nameMap = {}
 var codeMap = {}
+var commonMap = {}
 data.forEach(function (country) {
   nameMap[country.name.toLowerCase()] = country.code
   codeMap[country.code.toLowerCase()] = country.name
+  commonMap[country.code.toLowerCase()] = country.common
 })
 
 module.exports = CountryList
@@ -25,6 +27,10 @@ CountryList.prototype.getName = function getName (code) {
   return codeMap[code.toLowerCase()]
 }
 
+CountryList.prototype.getCommon = function getCommon (code) {
+  return commonMap[code.toLowerCase()]
+}
+
 CountryList.prototype.getNames = function getNames () {
   return data.map(function (country) {
     return country.name
@@ -34,6 +40,12 @@ CountryList.prototype.getNames = function getNames () {
 CountryList.prototype.getCodes = function getCodes () {
   return data.map(function (country) {
     return country.code
+  })
+}
+
+CountryList.prototype.getCommons = function getCommon () {
+  return data.map(function (country) {
+    return country.common
   })
 }
 

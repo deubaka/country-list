@@ -11,5 +11,7 @@ test('get code from country name', function (t) {
   t.type(countries.getCode('IS'), 'undefined', 'type of name "IS" is undefined')
   t.type(countries.getCode('FarFarAwayLand'), 'undefined', 'name "FarFarAwayLand" should return undefined')
   t.type(countries.getCode(''), 'undefined', 'empty name should return undefined')
+  t.type(countries.getCommon('TW'), 'Taiwan', 'common name for "TW" should return "Taiwan"')
+  t.type(countries.getCommon('KR'), 'South Korea', 'common name for "KR" should return "South Korea"')
   t.end()
 })
