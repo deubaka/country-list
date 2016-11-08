@@ -36,6 +36,12 @@ Expects the English country name.
 Returns the code for that country.
 If not found, it returns `undefined`.
 
+### getCodeForCommon(common)
+
+Expects the English common country name.
+Returns the code for that country.
+If not found, it returns `undefined`.
+
 ### getCommon(code)
 
 Expects a two-digit country code.
