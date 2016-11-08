@@ -36,6 +36,12 @@ Expects the English country name.
 Returns the code for that country.
 If not found, it returns `undefined`.
 
+### getCommon(code)
+
+Expects a two-digit country code.
+Returns the common name for that country (informal version of getName()).
+If not found, it returns `undefined`.
+
 ### getNames()
 
 Returns an array of all country names.
@@ -43,6 +49,10 @@ Returns an array of all country names.
 ### getCodes()
 
 Returns an array of all country codes.
+
+### getCommons()
+
+Returns an array of all common country codes (informal version of getNames()).
 
 ### getData()
 
